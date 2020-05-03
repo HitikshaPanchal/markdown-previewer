@@ -52,32 +52,32 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: placeholder
+      value: placeholder,
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     this.setState({
-      value: e.target.value
+      value: e.target.value,
     });
   }
 
   render() {
     return (
-      <div className='container-fluid'>
-        <div className='row justify-content-around pt-5'>
-          <div className='card col col-sm-5 border-dark editor-box p-0'>
-            <h3 className='card-header bg-dark text-white'>Editor</h3>
-            <div className='card-body p-0 ml-3 mt-3'>
+      <div className="container-fluid">
+        <div className="row justify-content-around pt-5">
+          <div className="card col col-sm-5 border-dark editor-box p-0">
+            <h3 className="card-header bg-dark text-white">Editor</h3>
+            <div className="card-body p-0 ml-3 mt-3">
               <textarea
-                id='editor'
+                id="editor"
                 onChange={this.handleChange}
                 defaultValue={this.state.value}
               ></textarea>
             </div>
           </div>
-          <div className='col col-sm-5 p-0'>
+          <div className="col col-sm-5 p-0">
             <Preview value={this.state.value} />
           </div>
         </div>
